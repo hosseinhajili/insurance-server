@@ -1,19 +1,55 @@
 {
-  "name": "insurance-server",
+  "name": "my-vite-insurance",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "node server/server.js",
+    "server:dev": "nodemon --ignore data/ --ignore uploads/ server/server.js",
+    "dev:full": "concurrently \"npm run server:dev\" \"npm run dev\""
+  },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "axios": "^1.13.1",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^4.21.2",
-    "fs": "^0.0.1-security",
-    "multer": "^1.4.5-lts.1",
+    "framer-motion": "^12.23.24",
+    "jalaali-js": "^1.2.8",
+    "lucide-react": "^0.553.0",
+    "multer": "^1.4.5-lts.2",
     "node-fetch": "^3.3.2",
     "nodemailer": "^7.0.10",
-    "path": "^0.12.7",
-    "url": "^0.11.4"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.9.5",
+    "styled-components": "^6.1.19",
+    "swiper": "^12.0.3",
+    "typescript": "^5.9.3"
   },
-  "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
-  }
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@tailwindcss/postcss": "^4.1.14",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.0.4",
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^8.2.2",
+    "eslint": "^9.36.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.22",
+    "globals": "^16.4.0",
+    "nodemon": "^3.1.10",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.14",
+    "vite": "^7.1.7"
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
